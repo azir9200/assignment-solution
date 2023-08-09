@@ -27,3 +27,22 @@ function sortMaker(arr) {
 const myArray = [4, 7, 42, 2, 34, -32, -45, 50];
 const origin = sortMaker(myArray);
 console.log(origin);
+
+
+function findAddress(obj) {
+  const infoProp = ['street', 'house', 'society'];
+  const gapProp = infoProp.filter(prop => !(prop in obj));
+  if (gapProp.length === 0) {
+    return `${obj.street}, ${obj.house}, ${obj.society}`;
+  } else {
+    const missInfo = gapProp.map(prop => `__${prop}__`).join(', ');
+    return ` ${missInfo}`;
+  }
+}
+const inputObject = {
+  street: "10",
+  house: "15A",
+  society: "Earth Perfect"
+};
+const result = findAddress(inputObject);
+console.log(result);
