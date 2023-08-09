@@ -46,3 +46,17 @@ const inputObject = {
 };
 const result = findAddress(inputObject);
 console.log(result);
+
+
+
+var changeArray = [1, 2, 1, 10];
+var chipsPrice = 18;
+
+function canPay(changeArray, totalDue) {
+  var total = 0;
+  for (var i = 0; i < changeArray.length; i++) {
+    total += changeArray[i];
+  } console.log(total);
+  return total >= totalDue;
+} var summery = canPay(changeArray, chipsPrice);
+console.log(summery);
