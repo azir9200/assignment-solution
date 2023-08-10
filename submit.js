@@ -1,12 +1,9 @@
-
-
 function cubeNumber(number) {
   if (typeof number !== "number") {
     return "Please enter a valid number."
   }
   return number ** 3;
 }
-
 function matchFinder(string1, string2) {
   if (typeof string1 !== "string" && typeof string2 !== "string") {
     return "Please enter a valid String ."
@@ -19,9 +16,6 @@ function matchFinder(string1, string2) {
     }
   }
 }
-
-
-
 function sortMaker(arr) {
   if (arr[0] < 0 || arr[1] < 0) {
     return "invalid input input"
@@ -35,25 +29,18 @@ function sortMaker(arr) {
     return arr;
   }
 }
-
-
-
-
 function findAddress(obj) {
   var result = "";
-
   if (obj.hasOwnProperty("street")) {
     result += obj.street + ",";
   } else {
     result += "__,";
   }
-
   if (obj.hasOwnProperty("house")) {
     result += obj.house + ",";
   } else {
     result += "__,";
   }
-
   if (obj.hasOwnProperty("society")) {
     result += obj.society + ",";
   } else {
@@ -61,8 +48,6 @@ function findAddress(obj) {
   }
   return result.slice(0, -1);
 }
-
-
 function canPay(changeArray, totalDue) {
   if (changeArray.length === 0) {
     return "invalid input";

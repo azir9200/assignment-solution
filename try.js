@@ -47,9 +47,7 @@ const inputObject = {
 const result = findAddress(inputObject);
 console.log(result);
 
-
-
-var changeArray = [1, 2, 1, 10];
+var changeArray = [1, 5, 2, 1, 10];
 var chipsPrice = 18;
 
 function canPay(changeArray, totalDue) {
@@ -57,6 +55,32 @@ function canPay(changeArray, totalDue) {
   for (var i = 0; i < changeArray.length; i++) {
     total += changeArray[i];
   } console.log(total);
-  return total >= totalDue;
+  return total >= chipsPrice;
 } var summery = canPay(changeArray, chipsPrice);
 console.log(summery);
+
+//kanon
+
+function findAddress(obj) {
+  var result = "";
+
+  if (obj.hasOwnProperty("street")) {
+    result += obj.street + ",";
+  } else {
+    result += "__,";
+  }
+
+  if (obj.hasOwnProperty("house")) {
+    result += obj.house + ",";
+  } else {
+    result += "__,";
+  }
+
+  if (obj.hasOwnProperty("society")) {
+    result += obj.society + ",";
+  } else {
+    result += "__,";
+  }
+
+  return result.slice(0, -1);
+}
